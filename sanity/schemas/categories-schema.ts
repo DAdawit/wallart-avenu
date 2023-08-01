@@ -16,7 +16,7 @@ export const Categories = {
     },
     {
       name: "coverImage",
-      title: "Cover Image",
+      title: "CoverImage",
       type: "image",
       options: { hotspot: true },
       fields: [

@@ -2,6 +2,7 @@ import { Project } from "@/types/Project";
 import { createClient, groq } from "next-sanity";
 import { clientConfig } from "./config/client-config";
 import { PageType } from "@/types/Page";
+import { CategoryType } from "@/types/category";
 export async function getProjects(): Promise<Project[]> {
   return createClient(clientConfig).fetch(
     groq`*[_type=="project"]{
@@ -53,5 +54,17 @@ export async function getPage(slug: string): Promise<PageType> {
     content
     }`,
     { slug }
+  );
+}
+
+export async function getCategories(): Promise<CategoryType[]> {
+  return createClient(clientConfig).fetch(
+    groq`*[_type == 'category']{
+        _id,
+        _createdAt,
+        name,
+        "slug":slug.current,
+        "coverImage":coverImage.asset->url,
+    }`
   );
 }
