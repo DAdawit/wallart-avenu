@@ -3,6 +3,7 @@ import Hero from "./components/Home/Hero";
 import Categories from "./components/Home/Categories";
 import SellCategories from "./components/Home/SellCategories";
 import Services from "./components/Home/Services";
+import Galleries from "./components/Home/Galleries";
 export default async function Home() {
   const categories = await getCategories();
 
@@ -12,6 +13,7 @@ export default async function Home() {
       <Categories categories={categories} />
       <SellCategories />
       <Services />
+      <Galleries />
     </main>
   );
 }

@@ -5,6 +5,7 @@ import { PageType } from "@/types/Page";
 import { CategoryType } from "@/types/category";
 import { sellCategoriesType } from "@/types/sellCategoryType";
 import { ServiceType } from "@/types/service";
+import { GalleryType } from "@/types/gallery";
 // export async function getProjects(): Promise<Project[]> {
 //   return createClient(clientConfig).fetch(
 //     groq`*[_type=="project"]{
@@ -103,6 +104,16 @@ export async function getServices(): Promise<ServiceType[]> {
     name,
     "icon":icon.asset->url,
     content
+  }`
+  );
+}
+
+export async function getGallery(): Promise<GalleryType[]> {
+  return createClient(clientConfig).fetch(
+    groq`*[_type == 'gallery']{
+    _id,
+    _createdAt,
+    "coverImage":coverImage.asset->url,
   }`
   );
 }

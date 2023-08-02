@@ -16,6 +16,20 @@ const Services = async () => {
     <>
       <section className="bg-[#0f0c0c] py-10">
         <div className="container mx-auto mt-16">
+          <div className="my-5">
+            <h1 className="text-center text-4xl sm:text-6xl text-white font-black capitalize">
+              Services
+            </h1>
+            <div className="flex justify-center py-3">
+              <Image
+                src="/logoOnly.png"
+                height={1000}
+                width={1000}
+                alt="logo image"
+                className="h-16 w-16 object-contain self-center text-orange-800"
+              />
+            </div>
+          </div>
           <div className="grid grid-cols-1 sm:grid-cols-3 justify-items-center  px-5 sm:px-0 gap-5">
             {services.map((service) => (
               <div
