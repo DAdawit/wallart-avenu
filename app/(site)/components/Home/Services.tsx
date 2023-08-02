@@ -17,7 +17,7 @@ const Services = async () => {
       <section className="bg-[#0f0c0c] py-10">
         <div className="container mx-auto mt-16">
           <div className="my-5">
-            <h1 className="text-center text-4xl sm:text-6xl text-white font-black capitalize">
+            <h1 className="text-center text-4xl sm:text-6xl text-white font-black capitalize tracking-wider">
               Services
             </h1>
             <div className="flex justify-center py-3">
@@ -49,7 +49,7 @@ const Services = async () => {
                   <h1 className="text-center text-secondary font-medium text-2xl whitespace-nowrap tracking-wider">
                     <span className={poppins.className}>{service.name}</span>
                   </h1>
-                  <p className="mt-2 text-center text-gray-50 max-w-xs tracking-wide text-sm font-normal">
+                  <p className="mt-2 text-center text-gray-50 max-w-xs tracking-wide text-sm font-light">
                     {/* <span className={nunito.className}> */}
                     <PortableText value={service.content} />
                     {/* </span> */}

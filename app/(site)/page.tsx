@@ -4,6 +4,7 @@ import Categories from "./components/Home/Categories";
 import SellCategories from "./components/Home/SellCategories";
 import Services from "./components/Home/Services";
 import Galleries from "./components/Home/Galleries";
+import Testimonials from "./components/Home/Testimonials";
 export default async function Home() {
   const categories = await getCategories();
 
@@ -14,6 +15,7 @@ export default async function Home() {
       <SellCategories />
       <Services />
       <Galleries />
+      <Testimonials />
     </main>
   );
 }

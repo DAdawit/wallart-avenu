@@ -12,7 +12,7 @@ const Galleries = async () => {
       <section className="bg-black  rounded-t-xl">
         <section className="container mx-auto px-5 sm:px-0 py-16 ">
           <div>
-            <h1 className="text-center text-4xl sm:text-6xl text-white font-black capitalize">
+            <h1 className="text-center text-4xl sm:text-6xl text-white font-black capitalize tracking-wider">
               Gallery
             </h1>
 

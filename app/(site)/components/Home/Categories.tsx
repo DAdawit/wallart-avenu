@@ -53,7 +53,7 @@ export default class Categories extends Component<CategoriesProps> {
       <>
         <section className="mt-24">
           <div className="my-5">
-            <h1 className="text-center text-4xl sm:text-6xl text-white font-black capitalize">
+            <h1 className="text-center text-4xl sm:text-6xl text-white font-black capitalize tracking-wider">
               Categories
             </h1>
             <div className="flex justify-center py-3">

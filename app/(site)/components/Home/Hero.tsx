@@ -52,7 +52,7 @@ const Hero = () => {
         </div>
       </div>
       <section className="mt-20">
-        <h1 className="text-center text-4xl sm:text-6xl text-white font-black capitalize">
+        <h1 className="text-center text-4xl sm:text-6xl text-white font-black capitalize tracking-wider">
           Wall Art Avenue
         </h1>
         <div className="flex justify-center py-3">
