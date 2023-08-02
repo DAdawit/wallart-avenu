@@ -4,6 +4,7 @@ import { clientConfig } from "./config/client-config";
 import { PageType } from "@/types/Page";
 import { CategoryType } from "@/types/category";
 import { sellCategoriesType } from "@/types/sellCategoryType";
+import { ServiceType } from "@/types/service";
 // export async function getProjects(): Promise<Project[]> {
 //   return createClient(clientConfig).fetch(
 //     groq`*[_type=="project"]{
@@ -91,5 +92,17 @@ export async function getSellCategories(): Promise<sellCategoriesType[]> {
         "slug":slug.current,
         "coverImage":coverImage.asset->url,
     }`
+  );
+}
+
+export async function getServices(): Promise<ServiceType[]> {
+  return createClient(clientConfig).fetch(
+    groq`*[_type == 'services']{
+    _id,
+    _createdAt,
+    name,
+    "icon":icon.asset->url,
+    content
+  }`
   );
 }

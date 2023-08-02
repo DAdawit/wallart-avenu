@@ -51,8 +51,22 @@ export default class Categories extends Component<CategoriesProps> {
 
     return (
       <>
-        <section>
-          <h1 className="text-center my-5 text-xl font-bold">Categories</h1>
+        <section className="mt-24">
+          <div className="my-5">
+            <h1 className="text-center text-4xl sm:text-6xl text-white font-black capitalize">
+              Categories
+            </h1>
+            <div className="flex justify-center py-3">
+              <Image
+                src="/logoOnly.png"
+                height={1000}
+                width={1000}
+                alt="logo image"
+                className="h-16 w-16 object-contain self-center text-orange-800"
+              />
+            </div>
+          </div>
+          {/* <h1 className="text-center my-5 text-xl font-bold">Categories</h1> */}
 
           <div className=" px-6 flex justify-center ">
             <div className="container mx-auto px-5 sm:px-0 ">
@@ -68,7 +82,9 @@ export default class Categories extends Component<CategoriesProps> {
                         className="w-full h-64  object-cover rounded-xl"
                       />
                     </Link>
-                    <h1 className="text- text-center">{category.name}</h1>
+                    <h1 className="text- text-center text-white">
+                      {category.name}
+                    </h1>
                   </div>
                 ))}
               </Slider>

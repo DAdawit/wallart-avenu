@@ -1,4 +1,3 @@
-import { getProject } from "@/sanity/sanity-utils";
 import React from "react";
 import { PortableText } from "@portabletext/react";
 type Props = {
@@ -6,12 +5,10 @@ type Props = {
 };
 const project = async ({ params }: Props) => {
   const slug = params.project;
-  const project = await getProject(slug);
+  // const project = await getProject(slug);
   return (
     <div>
-      <p>
-        <PortableText value={project.content} />
-      </p>
+      <p>{/* <PortableText value={project.content} /> */}</p>
     </div>
   );
 };
