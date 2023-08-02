@@ -1,4 +1,4 @@
-import { getPages } from "@/sanity/sanity-utils";
+// import { getPages } from "@/sanity/sanity-utils";
 import "../globals.css";
 import { Inter } from "next/font/google";
 import Link from "next/link";
@@ -16,7 +16,7 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const pages = await getPages();
+  // const pages = await getPages();
   return (
     <html lang="en">
       <body className={inter.className}>

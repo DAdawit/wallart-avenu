@@ -1,36 +1,37 @@
-import { Project } from "@/types/Project";
+// import { Project } from "@/types/Project";
 import { createClient, groq } from "next-sanity";
 import { clientConfig } from "./config/client-config";
 import { PageType } from "@/types/Page";
 import { CategoryType } from "@/types/category";
-export async function getProjects(): Promise<Project[]> {
-  return createClient(clientConfig).fetch(
-    groq`*[_type=="project"]{
-        _id,
-        _createdAt,
-        name,
-        "slug":slug.current,
-        "image":image.asset->url,
-        url,
-        content
-    }`
-  );
-}
+import { sellCategoriesType } from "@/types/sellCategoryType";
+// export async function getProjects(): Promise<Project[]> {
+//   return createClient(clientConfig).fetch(
+//     groq`*[_type=="project"]{
+//         _id,
+//         _createdAt,
+//         name,
+//         "slug":slug.current,
+//         "image":image.asset->url,
+//         url,
+//         content
+//     }`
+//   );
+// }
 
-export async function getProject(slug: string): Promise<Project> {
-  return createClient(clientConfig).fetch(
-    groq`*[_type=="project" && slug.current ==$slug][0]{
-        _id,
-        _createdAt,
-        name,
-        "slug":slug.current,
-        "image":image.asset->url,
-        url,
-        content
-    }`,
-    { slug }
-  );
-}
+// export async function getProject(slug: string): Promise<Project> {
+//   return createClient(clientConfig).fetch(
+//     groq`*[_type=="project" && slug.current ==$slug][0]{
+//         _id,
+//         _createdAt,
+//         name,
+//         "slug":slug.current,
+//         "image":image.asset->url,
+//         url,
+//         content
+//     }`,
+//     { slug }
+//   );
+// }
 
 export async function getPages(): Promise<PageType[]> {
   return createClient(clientConfig).fetch(
@@ -46,7 +47,7 @@ export async function getPages(): Promise<PageType[]> {
 
 export async function getPage(slug: string): Promise<PageType> {
   return createClient(clientConfig).fetch(
-    groq`*[_type == 'page' && slug.current== $slug][0]{
+    groq`*[_type == 'page' && slug.current == $slug][0]{
        _id,
     _createdAt,
     title,
@@ -60,6 +61,30 @@ export async function getPage(slug: string): Promise<PageType> {
 export async function getCategories(): Promise<CategoryType[]> {
   return createClient(clientConfig).fetch(
     groq`*[_type == 'category']{
+        _id,
+        _createdAt,
+        name,
+        "slug":slug.current,
+        "coverImage":coverImage.asset->url,
+    }`
+  );
+}
+
+export async function getCategorie(slug: string): Promise<CategoryType> {
+  return createClient(clientConfig).fetch(
+    groq`*[_type == 'category' && slug.current == $slug][0]{
+       _id,
+    _createdAt,
+    title,
+    "slug":slug.current,
+    "images":images.asset->url
+    }`,
+    { slug }
+  );
+}
+export async function getSellCategories(): Promise<sellCategoriesType[]> {
+  return createClient(clientConfig).fetch(
+    groq`*[_type == 'sellCategories']{
         _id,
         _createdAt,
         name,

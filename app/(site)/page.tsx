@@ -1,18 +1,15 @@
-import Image from "next/image";
-import { getCategories, getProjects } from "@/sanity/sanity-utils";
-import Link from "next/link";
+import { getCategories } from "@/sanity/sanity-utils";
 import Hero from "./components/Home/Hero";
-import Categories from "./components/Categories";
-import { CategoryType } from "@/types/category";
+import Categories from "./components/Home/Categories";
+import SellCategories from "./components/Home/SellCategories";
 export default async function Home() {
-  const projects = await getProjects();
   const categories = await getCategories();
 
   return (
     <main>
       <Hero />
-
       <Categories categories={categories} />
+      <SellCategories />
     </main>
   );
 }
