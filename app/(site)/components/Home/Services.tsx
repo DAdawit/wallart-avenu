@@ -10,7 +10,6 @@ const poppins = Poppins({
 
 const Services = async () => {
   const services = await getServices();
-  console.log(services);
 
   return (
     <>
@@ -50,9 +49,7 @@ const Services = async () => {
                     <span className={poppins.className}>{service.name}</span>
                   </h1>
                   <p className="mt-2 text-center text-gray-50 max-w-xs tracking-wide text-sm font-light">
-                    {/* <span className={nunito.className}> */}
                     <PortableText value={service.content} />
-                    {/* </span> */}
                   </p>
                 </div>
               </div>

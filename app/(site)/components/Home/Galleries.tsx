@@ -5,8 +5,6 @@ import FullImageDialog from "../../common/FullImageDialog";
 
 const Galleries = async () => {
   const galleries = await getGallery();
-  // console.log(galleries);
-
   return (
     <>
       <section className="bg-black  rounded-t-xl">

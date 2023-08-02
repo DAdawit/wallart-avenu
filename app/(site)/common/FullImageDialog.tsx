@@ -14,10 +14,12 @@ const poppins = Poppins({
   subsets: ["latin"],
   weight: ["400"],
 });
-interface PropsType {
+interface Props {
   image: string;
 }
-export default function FullImageDialog<PropsType>({ image }) {
+// const UserAvatar: React.FC<Props> = ({ image, alt }) => {
+
+const FullImageDialog: React.FC<Props> = ({ image }) => {
   const [open, setOpen] = React.useState(false);
 
   const handleClickOpen = () => {
@@ -59,4 +61,6 @@ export default function FullImageDialog<PropsType>({ image }) {
       </Dialog>
     </>
   );
-}
+};
+
+export default FullImageDialog;

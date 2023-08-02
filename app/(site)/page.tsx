@@ -5,6 +5,8 @@ import SellCategories from "./components/Home/SellCategories";
 import Services from "./components/Home/Services";
 import Galleries from "./components/Home/Galleries";
 import Testimonials from "./components/Home/Testimonials";
+import Pricing from "./components/Home/Pricing";
+import ContactUs from "./components/Home/Contact";
 export default async function Home() {
   const categories = await getCategories();
 
@@ -16,6 +18,8 @@ export default async function Home() {
       <Services />
       <Galleries />
       <Testimonials />
+      <Pricing />
+      <ContactUs />
     </main>
   );
 }
