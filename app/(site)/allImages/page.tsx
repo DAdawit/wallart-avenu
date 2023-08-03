@@ -5,7 +5,6 @@ import Image from "next/image";
 
 const page = async () => {
   const allImages = await getAllImages();
-  // console.log(allImages);
 
   return (
     <>

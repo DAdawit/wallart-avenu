@@ -15,17 +15,15 @@ export const gallery = {
       options: { source: "name" },
     },
     {
-      name: "coverImage",
-      title: "CoverImage",
+      name: "size", // Changed the name to "categoryName"
+      title: "Size",
+      type: "string",
+    },
+    {
+      name: "image",
+      title: "image",
       type: "image",
       options: { hotspot: true },
-      fields: [
-        {
-          name: "alt",
-          title: "Alt",
-          type: "string",
-        },
-      ],
     },
     {
       name: "content",

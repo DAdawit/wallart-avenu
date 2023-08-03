@@ -1,3 +1,4 @@
+import { ImageDetail } from "./ImageDetail";
 export type sellCategoriesType = {
   _id: string;
   _createdAt: Date;
@@ -7,19 +8,12 @@ export type sellCategoriesType = {
 };
 
 export type SellCategoryDetailType = {
-  _id: string;
-  _createdAt: Date;
-  name: string;
-  slug: string;
-  images: ImageDetail[];
-};
-
-export type ImageDetail = {
   _id?: string;
-  _createdAt?: string;
+  _createdAt?: Date;
   name: string;
   size: string;
   alt?: string;
   slug?: string;
   image: string;
+  images?: ImageDetail[];
 };

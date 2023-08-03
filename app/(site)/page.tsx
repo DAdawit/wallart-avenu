@@ -10,7 +10,7 @@ import ContactUs from "./components/Home/Contact";
 export default async function Home() {
   const categories = await getCategories();
   const galleries = await getGallery();
-  console.log(categories);
+  console.log(galleries);
 
   return (
     <main className="bg-bgPrimary">

@@ -87,7 +87,7 @@ export async function getCategory(slug: string): Promise<CategoryDetailType> {
         alt,
         name,
         size,
-        "url": asset->url
+        "image": asset->url
     }
     }`,
     { slug }
@@ -141,8 +141,9 @@ export async function getGallery(): Promise<GalleryType[]> {
     groq`*[_type == 'gallery']{
     _id,
     _createdAt,
+    alt,
     name,
-    "coverImage":coverImage.asset->url,
+    "image":image.asset->url,
   }`
   );
 }

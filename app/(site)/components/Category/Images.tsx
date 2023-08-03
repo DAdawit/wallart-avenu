@@ -1,14 +1,14 @@
 import Image from "next/image";
 import React from "react";
 import FullImageDialog from "../../common/FullImageDialog";
-import { ImageDetail } from "@/types/category";
+import { ImageDetail } from "@/types/ImageDetail";
 type Props = {
-  images: ImageDetail[];
+  images: ImageDetail[] | undefined;
 };
 const Images: React.FC<Props> = ({ images }) => {
   return (
     <div className="py-10">
-      {images?.length > 0 ? (
+      {!!images ? (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 justify-items-center mt-5">
           {images.map((image, index) => (
             <div key={index} className="w-full ">

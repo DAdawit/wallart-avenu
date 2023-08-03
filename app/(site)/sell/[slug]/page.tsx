@@ -1,5 +1,5 @@
 import React from "react";
-import { getCategory, getSellCategory } from "@/sanity/sanity-utils";
+import { getSellCategory } from "@/sanity/sanity-utils";
 import Images from "../../components/Category/Images";
 import Image from "next/image";
 type Props = {
@@ -8,6 +8,8 @@ type Props = {
 const page = async ({ params }: Props) => {
   const slug = params.slug;
   const sellCategories = await getSellCategory(slug);
+  // console.log(sellCategories);
+
   return (
     <>
       <section className="bg-bgPrimary">
@@ -26,7 +28,7 @@ const page = async ({ params }: Props) => {
               />
             </div>
           </div>
-          <Images images={sellCategories.images} />
+          <Images images={sellCategories?.images} />
         </div>
       </section>
     </>

@@ -8,7 +8,7 @@ type Props = {
 const page = async ({ params }: Props) => {
   const slug = params.slug;
   const categoryDetails = await getCategory(slug);
-  // console.log(categoryDetails);
+  console.log(categoryDetails);
   return (
     <>
       <section className="bg-bgPrimary">
