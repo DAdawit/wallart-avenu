@@ -25,7 +25,7 @@ const SellCategories = async () => {
                   {item.name}
                 </h1>
                 <Link
-                  href={`${item.slug}`}
+                  href={`/sell/${item.slug}`}
                   className="text-center self-center text-white hover:underline underline-offset-4 border-2 border-white px-3 py-1 rounded-full text-sm tracking-wider"
                 >
                   shop now

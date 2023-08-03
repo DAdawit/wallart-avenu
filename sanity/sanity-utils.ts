@@ -3,7 +3,10 @@ import { createClient, groq } from "next-sanity";
 import { clientConfig } from "./config/client-config";
 import { PageType } from "@/types/Page";
 import { CategoryDetailType, CategoryType } from "@/types/category";
-import { sellCategoriesType } from "@/types/sellCategoryType";
+import {
+  SellCategoryDetailType,
+  sellCategoriesType,
+} from "@/types/sellCategoryType";
 import { ServiceType } from "@/types/service";
 import { GalleryType } from "@/types/gallery";
 // export async function getProjects(): Promise<Project[]> {
@@ -98,6 +101,25 @@ export async function getSellCategories(): Promise<sellCategoriesType[]> {
         "slug":slug.current,
         "coverImage":coverImage.asset->url,
     }`
+  );
+}
+export async function getSellCategory(
+  slug: string
+): Promise<SellCategoryDetailType> {
+  return createClient(clientConfig).fetch(
+    groq`*[_type == 'sellCategories' && slug.current == $slug][0]{
+    _id,
+    _createdAt,
+    name,
+    "slug":slug.current,
+    "images":images[]{
+        alt,
+        name,
+        size,
+        "url": asset->url
+    }
+    }`,
+    { slug }
   );
 }
 
