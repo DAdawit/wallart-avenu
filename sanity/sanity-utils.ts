@@ -2,7 +2,7 @@
 import { createClient, groq } from "next-sanity";
 import { clientConfig } from "./config/client-config";
 import { PageType } from "@/types/Page";
-import { CategoryType } from "@/types/category";
+import { CategoryDetailType, CategoryType } from "@/types/category";
 import { sellCategoriesType } from "@/types/sellCategoryType";
 import { ServiceType } from "@/types/service";
 import { GalleryType } from "@/types/gallery";
@@ -72,14 +72,14 @@ export async function getCategories(): Promise<CategoryType[]> {
   );
 }
 
-export async function getCategorie(slug: string): Promise<CategoryType> {
+export async function getCategory(slug: string): Promise<CategoryDetailType> {
   return createClient(clientConfig).fetch(
     groq`*[_type == 'category' && slug.current == $slug][0]{
-       _id,
+    _id,
     _createdAt,
-    title,
+    name,
     "slug":slug.current,
-    "images":images.asset->url
+    "images":images[].asset->url
     }`,
     { slug }
   );

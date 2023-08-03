@@ -12,7 +12,7 @@ export default async function Home() {
   const galleries = await getGallery();
 
   return (
-    <main className="bg-[#231f1f]">
+    <main className="bg-bgPrimary">
       <Hero />
       <Categories categories={categories} />
       <SellCategories />

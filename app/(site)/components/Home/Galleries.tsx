@@ -3,8 +3,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { getGallery } from "@/sanity/sanity-utils";
 import FullImageDialog from "../../common/FullImageDialog";
-import Zoom from "react-medium-image-zoom";
-import "react-medium-image-zoom/dist/styles.css";
 import { GalleryType } from "@/types/gallery";
 interface Props {
   galleries: GalleryType[];

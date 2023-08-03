@@ -10,7 +10,7 @@ module.exports = {
       colors: {
         primary: "#3A3042",
         secondary: "#DB9D47",
-        bgPrimary: "#172121",
+        bgPrimary: "#231f1f",
         bgSecondary: "#212021",
         bgThird: "#121414",
         bgButton: "#6D4E1B",

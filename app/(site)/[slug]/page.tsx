@@ -6,7 +6,7 @@ type Props = {
 const page = async ({ params }: Props) => {
   const slug = params.slug;
   const page = await getPage(slug);
-  return <div>{/* <h1>{page.title}</h1> */}</div>;
+  return <div></div>;
 };
 
 export default page;

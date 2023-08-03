@@ -73,7 +73,7 @@ export default class Categories extends Component<CategoriesProps> {
               <Slider {...settings}>
                 {this.props.categories.map((category, index) => (
                   <div key={index} className="h-56 w-full px-3 ">
-                    <Link href={`${category.slug}`}>
+                    <Link href={`/category/${category.slug}`}>
                       <Image
                         src={`${category.coverImage}`}
                         height={1000}

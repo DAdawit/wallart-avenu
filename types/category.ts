@@ -7,3 +7,10 @@ export type CategoryType = {
   slug: string;
   coverImage: string;
 };
+export type CategoryDetailType = {
+  _id: string;
+  _createdAt: Date;
+  name: string;
+  slug: string;
+  images: string[];
+};
