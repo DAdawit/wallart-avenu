@@ -15,6 +15,8 @@ const Images: React.FC<Props> = ({ images }) => {
               <div className="relative">
                 <Image
                   src={`${image.image}`}
+                  placeholder={"blur"}
+                  blurDataURL={`${image.image}`}
                   height={1000}
                   width={1000}
                   alt="gallery image"
