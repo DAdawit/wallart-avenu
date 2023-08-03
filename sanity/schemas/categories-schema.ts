@@ -4,7 +4,7 @@ export const Categories = {
   type: "document",
   fields: [
     {
-      name: "name",
+      name: "name", // Changed the name to "categoryName"
       title: "Name",
       type: "string",
     },
@@ -12,7 +12,7 @@ export const Categories = {
       name: "slug",
       title: "Slug",
       type: "slug",
-      options: { source: "name" },
+      options: { source: "name" }, // Updated the source to "categoryName"
     },
     {
       name: "coverImage",
@@ -31,7 +31,29 @@ export const Categories = {
       name: "images",
       title: "Images",
       type: "array",
-      of: [{ type: "image", options: { hotspot: true } }],
+      of: [
+        {
+          type: "image",
+          options: { hotspot: true },
+          fields: [
+            {
+              name: "alt",
+              title: "Alt",
+              type: "string",
+            },
+            {
+              name: "name",
+              title: "Name",
+              type: "string",
+            },
+            {
+              name: "size",
+              title: "Size",
+              type: "string",
+            },
+          ],
+        },
+      ],
     },
   ],
 };

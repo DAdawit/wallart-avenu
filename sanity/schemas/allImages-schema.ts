@@ -1,18 +1,19 @@
-export const gallery = {
-  name: "gallery",
-  title: "Gallery",
+export const allImages = {
+  name: "allImages",
+  title: "AllImages",
   type: "document",
   fields: [
     {
-      name: "name",
+      name: "name", // Changed the name to "categoryName"
       title: "Name",
       type: "string",
     },
+
     {
       name: "slug",
       title: "Slug",
       type: "slug",
-      options: { source: "name" },
+      options: { source: "name" }, // Updated the source to "categoryName"
     },
     {
       name: "size", // Changed the name to "categoryName"
@@ -21,7 +22,7 @@ export const gallery = {
     },
     {
       name: "image",
-      title: "image",
+      title: "Image",
       type: "image",
       options: { hotspot: true },
     },

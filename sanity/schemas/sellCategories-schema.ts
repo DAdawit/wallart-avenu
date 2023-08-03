@@ -31,7 +31,29 @@ export const sellCategories = {
       name: "images",
       title: "Images",
       type: "array",
-      of: [{ type: "image", options: { hotspot: true } }],
+      of: [
+        {
+          type: "image",
+          options: { hotspot: true },
+          fields: [
+            {
+              name: "alt",
+              title: "Alt",
+              type: "string",
+            },
+            {
+              name: "name",
+              title: "Name",
+              type: "string",
+            },
+            {
+              name: "size",
+              title: "Size",
+              type: "string",
+            },
+          ],
+        },
+      ],
     },
   ],
 };

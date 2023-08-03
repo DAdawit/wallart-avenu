@@ -3,5 +3,8 @@ import { PortableTextBlock } from "sanity";
 export type GalleryType = {
   _id: string;
   _createdAt: Date;
-  coverImage: string;
+  name: string;
+  alt: string;
+  size: string;
+  image: string;
 };

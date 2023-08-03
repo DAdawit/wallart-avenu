@@ -30,7 +30,7 @@ const Pricing = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 justify-items-center pt-16">
-            <div className="grid w-full rounded-3xl">
+            <div className="grid w-full rounded-2xl">
               <div className="bg-gray-900 py-5 rounded-t-xl">
                 <div className="h-28 grid justify-items-center items-center justify-center ">
                   <h2 className="text-3xl text-secondary">Birr 500</h2>
@@ -66,8 +66,8 @@ const Pricing = () => {
                 </button>
               </div>
             </div>
-            <div className="grid w-full bg-gray-200 rounded-3xl -translate-y-10 translate-x-2">
-              <div className="bg-secondary py-5 rounded-t-3xl">
+            <div className="grid w-full bg-gray-200 rounded-3xl lg:-translate-y-10 lg:translate-x-2">
+              <div className="bg-secondary py-5 rounded-t-xl">
                 <div className="h-28 grid justify-items-center items-center justify-center ">
                   <h2 className="text-3xl text-white flex items-center gap-3">
                     <span>Birr 3000</span>
@@ -110,8 +110,8 @@ const Pricing = () => {
                 </button>
               </div>
             </div>
-            <div className="grid w-full bg-gray-200 rounded-3xl -translate-y-10 -translate-x-2">
-              <div className="bg-secondary py-5 rounded-t-3xl">
+            <div className="grid w-full bg-gray-200 rounded-xl lg:-translate-y-10 lg:-translate-x-2">
+              <div className="bg-secondary py-5 rounded-t-xl">
                 <div className="h-28 grid justify-items-center items-center justify-center ">
                   <h2 className="text-3xl text-white flex items-center gap-3">
                     <span>Birr 6000</span>
@@ -154,7 +154,7 @@ const Pricing = () => {
                 </button>
               </div>
             </div>
-            <div className="grid w-full rounded-3xl">
+            <div className="grid w-full rounded-xl">
               <div className="bg-gray-900 py-5 rounded-t-2xl">
                 <div className="h-28 flex items-center justify-center ">
                   <h2 className="flex items-center text-3xl text-secondary">
