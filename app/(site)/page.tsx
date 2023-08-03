@@ -1,4 +1,4 @@
-import { getCategories } from "@/sanity/sanity-utils";
+import { getCategories, getGallery } from "@/sanity/sanity-utils";
 import Hero from "./components/Home/Hero";
 import Categories from "./components/Home/Categories";
 import SellCategories from "./components/Home/SellCategories";
@@ -9,6 +9,7 @@ import Pricing from "./components/Home/Pricing";
 import ContactUs from "./components/Home/Contact";
 export default async function Home() {
   const categories = await getCategories();
+  const galleries = await getGallery();
 
   return (
     <main className="bg-[#231f1f]">
@@ -16,7 +17,7 @@ export default async function Home() {
       <Categories categories={categories} />
       <SellCategories />
       <Services />
-      <Galleries />
+      <Galleries galleries={galleries} />
       <Testimonials />
       <Pricing />
       <ContactUs />

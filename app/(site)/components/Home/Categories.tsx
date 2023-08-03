@@ -79,7 +79,7 @@ export default class Categories extends Component<CategoriesProps> {
                         height={1000}
                         width={1000}
                         alt="breakfast"
-                        className="w-full h-64  object-cover rounded-xl"
+                        className="w-full h-44 sm:h-64  object-cover rounded-xl"
                       />
                     </Link>
                     <h1 className="text- text-center text-white">

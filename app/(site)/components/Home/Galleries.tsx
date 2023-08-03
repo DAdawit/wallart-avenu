@@ -1,10 +1,16 @@
+"use client";
 import Link from "next/link";
 import Image from "next/image";
 import { getGallery } from "@/sanity/sanity-utils";
 import FullImageDialog from "../../common/FullImageDialog";
-
-const Galleries = async () => {
-  const galleries = await getGallery();
+import Zoom from "react-medium-image-zoom";
+import "react-medium-image-zoom/dist/styles.css";
+import { GalleryType } from "@/types/gallery";
+interface Props {
+  galleries: GalleryType[];
+}
+const Galleries: React.FC<Props> = ({ galleries }) => {
+  // const galleries = await getGallery();
   return (
     <>
       <section className="bg-black  rounded-t-xl">
@@ -28,6 +34,7 @@ const Galleries = async () => {
                 {galleries.map((gallery) => (
                   <div key={gallery._id} className="w-full ">
                     <div className="relative">
+                      {/* <Zoom> */}
                       <Image
                         src={`${gallery.coverImage}`}
                         height={1000}
@@ -35,6 +42,7 @@ const Galleries = async () => {
                         alt="gallery image"
                         className="h-96 w-full object-cover  rounded-xl"
                       />
+                      {/* </Zoom> */}
                       <div className="absolute bottom-3 left-3 ">
                         <FullImageDialog image={gallery.coverImage} />
                       </div>

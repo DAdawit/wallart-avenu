@@ -46,7 +46,12 @@ const FullImageDialog: React.FC<Props> = ({ image }) => {
         </span>
       </button>
 
-      <Dialog open={open} onClose={handleClose}>
+      <Dialog
+        open={open}
+        onClose={handleClose}
+        fullWidth={false}
+        maxWidth={"sm"}
+      >
         <DialogContent>
           <DialogContentText id="alert-dialog-description">
             <Image
@@ -54,7 +59,7 @@ const FullImageDialog: React.FC<Props> = ({ image }) => {
               width={1000}
               alt="image"
               src={image}
-              className="h-screen w-full object-contain block"
+              className="h-[80%]  object-contain block"
             />
           </DialogContentText>
         </DialogContent>
