@@ -12,5 +12,12 @@ export type CategoryDetailType = {
   _createdAt: Date;
   name: string;
   slug: string;
-  images: string[];
+  images: ImageDetail[];
+};
+
+export type ImageDetail = {
+  alt: string;
+  name: string;
+  size: string;
+  url: string;
 };

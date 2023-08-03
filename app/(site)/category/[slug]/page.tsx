@@ -3,11 +3,11 @@ import { getCategory } from "@/sanity/sanity-utils";
 import Images from "../../components/Category/Images";
 import Image from "next/image";
 type Props = {
-  params: { category: string };
+  params: { slug: string };
 };
 const page = async ({ params }: Props) => {
-  const category = params.category;
-  const categoryDetails = await getCategory(category);
+  const slug = params.slug;
+  const categoryDetails = await getCategory(slug);
   // console.log(categoryDetails);
   return (
     <>
@@ -15,7 +15,7 @@ const page = async ({ params }: Props) => {
         <div className="container mx-auto px-10 sm:px-5 min-h-screen">
           <div className="py-5">
             <h1 className="text-center text-4xl sm:text-6xl text-white font-black capitalize tracking-wider">
-              {categoryDetails?.name}
+              {categoryDetails.name}
             </h1>
             <div className="flex justify-center pt-3">
               <Image
@@ -27,7 +27,6 @@ const page = async ({ params }: Props) => {
               />
             </div>
           </div>
-
           <Images images={categoryDetails.images} />
         </div>
       </section>

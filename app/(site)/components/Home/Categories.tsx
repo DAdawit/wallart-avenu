@@ -83,7 +83,7 @@ export default class Categories extends Component<CategoriesProps> {
                       />
                     </Link>
                     <h1 className="text- text-center text-white">
-                      {category.name}
+                      {category?.name}
                     </h1>
                   </div>
                 ))}

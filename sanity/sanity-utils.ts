@@ -50,7 +50,7 @@ export async function getPages(): Promise<PageType[]> {
 export async function getPage(slug: string): Promise<PageType> {
   return createClient(clientConfig).fetch(
     groq`*[_type == 'page' && slug.current == $slug][0]{
-       _id,
+    _id,
     _createdAt,
     title,
     "slug":slug.current,
@@ -79,7 +79,12 @@ export async function getCategory(slug: string): Promise<CategoryDetailType> {
     _createdAt,
     name,
     "slug":slug.current,
-    "images":images[].asset->url
+    "images":images[]{
+        alt,
+        name,
+        size,
+        "url": asset->url
+    }
     }`,
     { slug }
   );
@@ -113,6 +118,7 @@ export async function getGallery(): Promise<GalleryType[]> {
     groq`*[_type == 'gallery']{
     _id,
     _createdAt,
+    name,
     "coverImage":coverImage.asset->url,
   }`
   );
