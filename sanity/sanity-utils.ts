@@ -9,6 +9,7 @@ import {
 } from "@/types/sellCategoryType";
 import { ServiceType } from "@/types/service";
 import { GalleryType } from "@/types/gallery";
+import { AllImagesType } from "@/types/allImage";
 // export async function getProjects(): Promise<Project[]> {
 //   return createClient(clientConfig).fetch(
 //     groq`*[_type=="project"]{
@@ -116,7 +117,7 @@ export async function getSellCategory(
         alt,
         name,
         size,
-        "url": asset->url
+        "image": asset->url
     }
     }`,
     { slug }
@@ -142,6 +143,19 @@ export async function getGallery(): Promise<GalleryType[]> {
     _createdAt,
     name,
     "coverImage":coverImage.asset->url,
+  }`
+  );
+}
+
+export async function getAllImages(): Promise<AllImagesType[]> {
+  return createClient(clientConfig).fetch(
+    groq`*[_type == 'allImages']{
+    _id,
+    _createdAt,
+    slug,
+    name,
+    size,
+    "image":image.asset->url,
   }`
   );
 }

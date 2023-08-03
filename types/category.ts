@@ -16,8 +16,11 @@ export type CategoryDetailType = {
 };
 
 export type ImageDetail = {
-  alt: string;
+  _id?: string;
+  _createdAt?: Date;
   name: string;
+  alt: string;
+  slug?: string;
   size: string;
-  url: string;
+  image: string;
 };

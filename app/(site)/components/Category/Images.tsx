@@ -14,14 +14,14 @@ const Images: React.FC<Props> = ({ images }) => {
             <div key={index} className="w-full ">
               <div className="relative">
                 <Image
-                  src={`${image.url}`}
+                  src={`${image.image}`}
                   height={1000}
                   width={1000}
                   alt="gallery image"
                   className="h-96 w-full object-cover  rounded-xl"
                 />
                 <div className="absolute bottom-3 left-3 ">
-                  <FullImageDialog image={image.url} />
+                  <FullImageDialog image={image.image} />
                 </div>
                 <h4 className="bg-white text-black rounded-full absolute top-5 left-5 text-sm opacity-75 px-2 py-1">
                   {image.size}

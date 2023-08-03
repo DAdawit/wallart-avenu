@@ -15,8 +15,11 @@ export type SellCategoryDetailType = {
 };
 
 export type ImageDetail = {
-  alt: string;
+  _id?: string;
+  _createdAt?: string;
   name: string;
   size: string;
-  url: string;
+  alt?: string;
+  slug?: string;
+  image: string;
 };
