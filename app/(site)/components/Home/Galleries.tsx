@@ -4,7 +4,7 @@ import Image from "next/image";
 import { getGallery } from "@/sanity/sanity-utils";
 import FullImageDialog from "../../common/FullImageDialog";
 import { GalleryType } from "@/types/gallery";
-import Images from "../Category/Images";
+import Images from "../../common/Images";
 interface Props {
   galleries: GalleryType[];
 }
