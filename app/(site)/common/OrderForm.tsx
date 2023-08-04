@@ -9,6 +9,7 @@ import DialogTitle from "@mui/material/DialogTitle";
 import Image from "next/image";
 import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
 import { Poppins } from "next/font/google";
+import Form from "./Form";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -53,33 +54,7 @@ const OrderForm: React.FC<Props> = ({ image }) => {
       >
         <DialogContent>
           <DialogContentText id="alert-dialog-description">
-            <form action="">
-              <div className="grid gap-y-3 justify-items-center">
-                <input
-                  type="text"
-                  placeholder="First Name"
-                  className="rounded-full "
-                />
-                <input
-                  type="text"
-                  placeholder="Last Name"
-                  className="rounded-full "
-                />
-                <input
-                  type="number"
-                  placeholder="phone Number"
-                  className="rounded-full "
-                />
-                <input
-                  type="text"
-                  placeholder="Full Address"
-                  className="rounded-full "
-                />
-                <button className="px-4 py-2 bg-secondary text-white rounded-full w-max uppercase text-sm font-medium tracking-wide">
-                  place order
-                </button>
-              </div>
-            </form>
+            <Form image={image} handleClose={() => handleClose()} />
           </DialogContentText>
         </DialogContent>
       </Dialog>
