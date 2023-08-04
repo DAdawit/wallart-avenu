@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
 import FullImageDialog from "./FullImageDialog";
 import { ImageDetail } from "@/types/ImageDetail";
 import OrderForm from "./OrderForm";
@@ -7,6 +7,18 @@ type Props = {
   images: ImageDetail[] | undefined;
 };
 const Images: React.FC<Props> = ({ images }) => {
+  useEffect(() => {
+    const preventRightClick = (e: MouseEvent) => {
+      e.preventDefault();
+    };
+
+    window.addEventListener("contextmenu", preventRightClick);
+
+    // Cleanup function to remove the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("contextmenu", preventRightClick);
+    };
+  }, []);
   return (
     <div className="py-10">
       {!!images ? (
