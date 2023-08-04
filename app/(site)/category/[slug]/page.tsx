@@ -1,6 +1,6 @@
 import React from "react";
 import { getCategory } from "@/sanity/sanity-utils";
-import Images from "../../components/Category/Images";
+import Images from "../../common/Images";
 import Image from "next/image";
 type Props = {
   params: { slug: string };

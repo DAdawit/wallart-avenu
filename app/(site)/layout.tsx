@@ -4,7 +4,8 @@ import { Inter } from "next/font/google";
 import Link from "next/link";
 import NavBar from "./common/NavBar";
 import Footer from "./common/Footer";
-
+import Head from "next/head";
+import Script from "next/script";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -20,6 +21,8 @@ export default async function RootLayout({
   // const pages = await getPages();
   return (
     <html lang="en">
+      <Script src="https://smtpjs.com/v3/smtp.js"></Script>
+
       <body className={inter.className}>
         <NavBar />
         {children}

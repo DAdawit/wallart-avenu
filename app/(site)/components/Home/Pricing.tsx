@@ -33,8 +33,8 @@ const Pricing = () => {
             <div className="grid w-full rounded-2xl">
               <div className="bg-gray-900 py-5 rounded-t-xl">
                 <div className="h-28 grid justify-items-center items-center justify-center ">
-                  <h2 className="text-3xl text-secondary">Birr 500</h2>
-                  <h4 className="text-center text-lg font-medium font-sans capitalize text-secondary -mt-10">
+                  <h2 className="text-3xl text-white">Birr 500</h2>
+                  <h4 className="text-center text-lg font-medium font-sans capitalize text-white -mt-10">
                     Digital image
                   </h4>
                 </div>
@@ -157,14 +157,14 @@ const Pricing = () => {
             <div className="grid w-full rounded-xl">
               <div className="bg-gray-900 py-5 rounded-t-2xl">
                 <div className="h-28 flex items-center justify-center ">
-                  <h2 className="flex items-center text-3xl text-secondary">
+                  <h2 className="flex items-center text-3xl text-white">
                     <span> Birr 8000</span>
                     <span>
                       <ArrowUpwardIcon />
                     </span>
                   </h2>
                 </div>
-                <h4 className="text-center text-lg font-medium font-sans -mt-10 capitalize text-secondary">
+                <h4 className="text-center text-lg font-medium font-sans -mt-10 capitalize text-white">
                   Custom design with copyright ownership
                 </h4>
               </div>

@@ -1,7 +1,8 @@
 import Image from "next/image";
 import React from "react";
-import FullImageDialog from "../../common/FullImageDialog";
+import FullImageDialog from "./FullImageDialog";
 import { ImageDetail } from "@/types/ImageDetail";
+import OrderForm from "./OrderForm";
 type Props = {
   images: ImageDetail[] | undefined;
 };
@@ -23,7 +24,10 @@ const Images: React.FC<Props> = ({ images }) => {
                   className="h-96 w-full object-cover  rounded-xl"
                 />
                 <div className="absolute bottom-3 left-3 ">
-                  <FullImageDialog image={image.image} />
+                  <div className="flex items-center gap-3">
+                    <FullImageDialog image={image.image} />
+                    <OrderForm image={image.image} />
+                  </div>
                 </div>
                 <h4 className="bg-white text-black rounded-full absolute top-5 left-5 text-sm opacity-75 px-2 py-1">
                   {image.size}

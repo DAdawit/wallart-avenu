@@ -23,33 +23,6 @@ const Hero = () => {
             className="object-contain w-80"
           />
         </div>
-        <div className="absolute top-1 w-full z-30 px-16">
-          <div className="flex justify-between gap-x-3 items-center">
-            <div className="">
-              <Image
-                src="/logo.png"
-                width={1000}
-                height={1000}
-                alt="logo"
-                className="h-14 w-36 object-contain"
-              />
-            </div>
-            <div className="flex gap-2">
-              <Link
-                href="/history"
-                className="text-white font-bold underline underline-offset-2"
-              >
-                01. HISTORY
-              </Link>
-              <Link
-                href="/team"
-                className="text-white font-bold underline underline-offset-2"
-              >
-                02. TEAM
-              </Link>
-            </div>
-          </div>
-        </div>
       </div>
       <section className="mt-20">
         <h1 className="text-center text-4xl sm:text-6xl text-white font-black capitalize tracking-wider">

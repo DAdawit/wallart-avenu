@@ -1,6 +1,6 @@
 import { getAllImages } from "@/sanity/sanity-utils";
 import React from "react";
-import Images from "../components/Category/Images";
+import Images from "../common/Images";
 import Image from "next/image";
 
 const page = async () => {
