@@ -36,7 +36,7 @@ const NavBar = async () => {
             <Link href="#contactus">CONTACT US</Link>
           </li>
         </ul>
-        <div className="">
+        <div className="md:hidden">
           <NavDrawer />
         </div>
       </div>
