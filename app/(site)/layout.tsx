@@ -31,7 +31,7 @@ export default async function RootLayout({
         </section>
         {children}
         <Footer />
-        {/* <PriventScreenShot /> */}
+        <PriventScreenShot />
         <MoveToTop />
       </body>
     </html>

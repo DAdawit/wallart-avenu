@@ -8,7 +8,7 @@ const NavBar = async () => {
   const pages = await getPages();
 
   return (
-    <header className="bg-gray-800 text-white flex justify-between items-center py-3 px-5">
+    <header className="bg-[#111827] text-white flex justify-between items-center py-3 px-10">
       <Link href="/">
         <Image
           src="/logo.png"
@@ -18,7 +18,7 @@ const NavBar = async () => {
           className="h-14 w-36 object-contain"
         />
       </Link>
-      <div className="flex items-center gap-3">
+      <div className="flex items-center gap-x-3">
         <ul className="hidden md:flex gap-x-2 items-center ">
           <li>
             <Link href="/">HOME</Link>

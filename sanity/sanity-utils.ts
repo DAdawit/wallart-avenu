@@ -10,6 +10,7 @@ import {
 import { ServiceType } from "@/types/service";
 import { GalleryType } from "@/types/gallery";
 import { AllImagesType } from "@/types/allImage";
+import { CarosoleType } from "@/types/carosole";
 // export async function getProjects(): Promise<Project[]> {
 //   return createClient(clientConfig).fetch(
 //     groq`*[_type=="project"]{
@@ -38,6 +39,15 @@ import { AllImagesType } from "@/types/allImage";
 //     { slug }
 //   );
 // }
+export async function getCarosoles(): Promise<CarosoleType[]> {
+  return createClient(clientConfig).fetch(
+    groq`*[_type == 'carosole']{
+        _id,
+        _createdAt,
+        "image":image.asset->url,
+    }`
+  );
+}
 
 export async function getPages(): Promise<PageType[]> {
   return createClient(clientConfig).fetch(

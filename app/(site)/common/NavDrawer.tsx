@@ -132,9 +132,9 @@ export default function NavDrawer() {
                   <h2 className="text-center text-white font-bold text-lg">
                     +251936207512
                   </h2>
-                  {/* <h2 className="text-center text-primary font-bold text-2xl">
-                    +251936207512
-                  </h2> */}
+                  <h2 className="text-center text-white font-bold text-lg">
+                    +251941807555
+                  </h2>
                 </section>
               </div>
             </Box>

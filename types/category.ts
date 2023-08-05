@@ -1,4 +1,3 @@
-import { PortableTextBlock } from "sanity";
 import { ImageDetail } from "./ImageDetail";
 
 export type CategoryType = {
