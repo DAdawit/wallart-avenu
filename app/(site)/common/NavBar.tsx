@@ -19,12 +19,22 @@ const NavBar = async () => {
         />
       </Link>
       <div className="flex items-center gap-3">
-        <ul className="flex gap-x-2 items-center">
-          {pages.map((page) => (
-            <li key={page._id}>
-              <Link href={`/${page.slug}`}>{page.title}</Link>
-            </li>
-          ))}
+        <ul className="hidden md:flex gap-x-2 items-center ">
+          <li>
+            <Link href="/">HOME</Link>
+          </li>
+          <li>
+            <Link href="#about">ABOUT</Link>
+          </li>
+          <li>
+            <Link href="#services">SERVICES</Link>
+          </li>
+          <li>
+            <Link href="#pricing">PRICING</Link>
+          </li>
+          <li>
+            <Link href="#contactus">CONTACT US</Link>
+          </li>
         </ul>
         <div className="">
           <NavDrawer />

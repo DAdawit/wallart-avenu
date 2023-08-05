@@ -44,7 +44,7 @@ const ContactUs = () => {
   };
 
   return (
-    <div className=" container mx-auto px-5 sm:px-0 bg-black py-10 mt-10">
+    <div className=" container mx-auto px-5 sm:px-0 bg-black py-10 mt-10 pb-10">
       <h1 className="text-center text-6xl text-white font-black capitalize mt-10">
         <span className={`text-[#DB9D47] ${poppins.className}`}>
           Contact Us
