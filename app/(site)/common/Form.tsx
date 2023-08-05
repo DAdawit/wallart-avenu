@@ -48,7 +48,10 @@ const Form: React.FC<Props> = ({ image, handleClose }) => {
   return (
     <>
       <form ref={form} onSubmit={sendEmail}>
-        <div className="grid gap-y-1 justify-items-center">
+        <div className="grid gap-y-1 justify-items-center w-60">
+          <h1 className="uppercase text-4xl font-bold text-center my-5">
+            order now
+          </h1>
           <div className="grid">
             <label>First Name</label>
             <input
@@ -99,7 +102,7 @@ const Form: React.FC<Props> = ({ image, handleClose }) => {
             type="submit"
             className="flex justify-center mt-5 items-center bg-secondary rounded-full w-max text-white font-medium gap-x-3 py-1 px-8"
           >
-            <span>order now</span>
+            <span>Place Order</span>
             <span>{loading ? <Spinner /> : null}</span>
           </button>
         </div>

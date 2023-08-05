@@ -16,8 +16,8 @@ export default class Carosole extends Component<CarosoleProps> {
       slidesToShow: 1,
       slidesToScroll: 1,
       autoplay: true,
-      speed: 500,
-      autoplaySpeed: 1000,
+      speed: 1500,
+      autoplaySpeed: 5000,
       cssEase: "linear",
     };
     return (
