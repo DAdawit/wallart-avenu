@@ -3,6 +3,7 @@ import React, { useState, useRef, FormEvent } from "react";
 import { useForm, Resolver } from "react-hook-form";
 import { Spinner } from "../icons/Spinner";
 import emailjs from "@emailjs/browser";
+import { notify } from "../ToastMesssage/toast";
 type Props = {
   image: string;
   handleClose: () => void; // Add this line
@@ -28,7 +29,10 @@ const Form: React.FC<Props> = ({ image, handleClose }) => {
         )
         .then(
           (result) => {
-            alert("emil send");
+            notify(
+              "your order has been sent, we will contact you soon",
+              "success"
+            );
             setLoading(false);
             handleClose();
             console.log(result.text);

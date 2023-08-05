@@ -6,6 +6,7 @@ import NavBar from "./common/NavBar";
 import Footer from "./common/Footer";
 import Head from "next/head";
 import Script from "next/script";
+import PriventScreenShot from "./common/PriventScreenShot";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -27,6 +28,7 @@ export default async function RootLayout({
         <NavBar />
         {children}
         <Footer />
+        <PriventScreenShot />
       </body>
     </html>
   );

@@ -7,6 +7,8 @@ import Galleries from "./components/Home/Galleries";
 import Testimonials from "./components/Home/Testimonials";
 import Pricing from "./components/Home/Pricing";
 import ContactUs from "./components/Home/Contact";
+import { Toaster } from "react-hot-toast";
+
 export default async function Home() {
   const categories = await getCategories();
   const galleries = await getGallery();
@@ -14,6 +16,7 @@ export default async function Home() {
 
   return (
     <main className="bg-bgPrimary">
+      <Toaster />
       <Hero />
       <Categories categories={categories} />
       <SellCategories />
