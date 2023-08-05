@@ -2,6 +2,7 @@ import { getPages } from "@/sanity/sanity-utils";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import NavDrawer from "./NavDrawer";
 
 const NavBar = async () => {
   const pages = await getPages();
@@ -17,13 +18,18 @@ const NavBar = async () => {
           className="h-14 w-36 object-contain"
         />
       </Link>
-      <ul className="flex gap-x-2 items-center">
-        {pages.map((page) => (
-          <li key={page._id}>
-            <Link href={`/${page.slug}`}>{page.title}</Link>
-          </li>
-        ))}
-      </ul>
+      <div className="flex items-center gap-3">
+        <ul className="flex gap-x-2 items-center">
+          {pages.map((page) => (
+            <li key={page._id}>
+              <Link href={`/${page.slug}`}>{page.title}</Link>
+            </li>
+          ))}
+        </ul>
+        <div className="">
+          <NavDrawer />
+        </div>
+      </div>
     </header>
   );
 };
