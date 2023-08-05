@@ -5,6 +5,7 @@ import { sellCategories } from "./sellCategories-schema";
 import { Service } from "./services-schema";
 import { gallery } from "./gallery-schema";
 import { allImages } from "./allImages-schema";
+import { Carosole } from "./carosole-schema";
 const schemas = [
   project,
   page,
@@ -13,6 +14,7 @@ const schemas = [
   Service,
   gallery,
   allImages,
+  Carosole,
 ];
 
 export default schemas;
