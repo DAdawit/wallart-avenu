@@ -68,7 +68,7 @@ export default function NavDrawer() {
                     alt="spector"
                     width={150}
                     height={100}
-                    className="self-center object-contain"
+                    className="self-center object-contain pointer-events-none select-none"
                   />
                 </div>
                 <section className="mt-10 flex flex-col gap-2 pl-3">

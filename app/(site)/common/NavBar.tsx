@@ -15,7 +15,7 @@ const NavBar = async () => {
           width={1000}
           height={1000}
           alt="logo"
-          className="h-14 w-36 object-contain"
+          className="h-14 w-36 object-contain pointer-events-none select-none"
         />
       </Link>
       <div className="flex items-center gap-x-3">

@@ -29,7 +29,7 @@ const Services = async () => {
               />
             </div>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-3 justify-items-center  px-5 sm:px-0 gap-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  justify-items-center  px-5 sm:px-0 gap-5">
             {services.map((service) => (
               <div
                 key={service._id}
@@ -41,7 +41,7 @@ const Services = async () => {
                     height={1000}
                     width={1000}
                     alt={service.name}
-                    className="h-16 w-16 object-cover"
+                    className="h-16 w-16 object-cover pointer-events-none select-none"
                   />
                 </div>
                 <div className="flex flex-col items-center mt-3">

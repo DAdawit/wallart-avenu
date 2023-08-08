@@ -23,7 +23,7 @@ const page = async ({ params }: Props) => {
                 height={1000}
                 width={1000}
                 alt="logo image"
-                className="h-16 w-16 object-contain self-center text-orange-800"
+                className="h-16 w-16 object-contain self-center text-orange-800 pointer-events-none select-none"
               />
             </div>
           </div>

@@ -88,7 +88,7 @@ export default class Testimonials extends Component {
                           alt="spector"
                           width={100}
                           height={200}
-                          className="h-14 w-14 rounded-full"
+                          className="h-14 w-14 rounded-full pointer-events-none select-none "
                         />
                       </div>
                       <div>

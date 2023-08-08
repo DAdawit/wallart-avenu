@@ -11,7 +11,7 @@ const Hero = () => {
           src="/banner3.jpg"
           alt="spector"
           fill
-          className="w-screen h-96 md:h-screen object-cover brightness-50"
+          className="w-screen h-96 md:h-screen object-cover brightness-50 pointer-events-none select-none"
           blurDataURL="/banner2.png"
         />
         <div className="absolute top-1/3  z-30 px-16 w-full flex justify-center">

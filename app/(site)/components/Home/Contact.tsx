@@ -102,7 +102,7 @@ const ContactUs = () => {
             alt="spector"
             width={2000}
             height={2000}
-            className="text-center h-80 md:h-[93vh] w-full object-cover object-center"
+            className="text-center h-80 md:h-[93vh] w-full object-cover object-center pointer-events-none select-none"
           />
         </div>
       </section>

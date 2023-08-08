@@ -21,7 +21,6 @@ export default async function Home() {
     <main className="bg-bgPrimary">
       <Toaster />
       <Carosole carosoles={carosoles} />
-      {/* <Hero /> */}
       <section id="about">
         <AboutUs />
       </section>
