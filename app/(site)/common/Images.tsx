@@ -20,7 +20,7 @@ const Images: React.FC<Props> = ({ images }) => {
                   height={1000}
                   width={1000}
                   alt="gallery image"
-                  className="h-96 w-full object-cover  rounded-xl"
+                  className="h-96 w-full object-cover  rounded-xl pointer-events-none select-none"
                 />
                 <div className="absolute bottom-3 left-3 ">
                   <div className="flex items-center gap-3">

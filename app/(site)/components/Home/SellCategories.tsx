@@ -18,7 +18,7 @@ const SellCategories = async () => {
                 height={1000}
                 width={1000}
                 alt="breakfast"
-                className="w-full h-96 object-cover rounded-xl brightness-75 hover:brightness-90 hover:scale-105 transition-all hover:-skew-x-1"
+                className="w-full h-96 object-cover rounded-xl brightness-75 hover:brightness-90 hover:scale-105 transition-all hover:-skew-x-1 pointer-events-none select-none"
               />
               <div className="absolute bottom-0 py-5 w-full bg-black opacity-70 rounded-xl flex flex-col justify-center">
                 <h1 className="text-10 text-center text-white text-lg font-bold tracking-wider">

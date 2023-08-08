@@ -6,8 +6,9 @@ import NavBar from "./common/NavBar";
 import Footer from "./common/Footer";
 import Head from "next/head";
 import Script from "next/script";
-import PriventScreenShot from "./common/PriventScreenShot";
 import MoveToTop from "./common/MoveToTop";
+import PriventScreenShot from "./common/PriventScreenShot";
+import PriventKeyListner from "./common/PriventKeyListner";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -23,8 +24,6 @@ export default async function RootLayout({
   // const pages = await getPages();
   return (
     <html lang="en" className="scroll-smooth">
-      <Script src="https://smtpjs.com/v3/smtp.js"></Script>
-
       <body className={inter.className}>
         <section id="Nav">
           <NavBar />
@@ -33,6 +32,7 @@ export default async function RootLayout({
         <Footer />
         <PriventScreenShot />
         <MoveToTop />
+        <PriventKeyListner />
       </body>
     </html>
   );

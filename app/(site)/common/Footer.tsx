@@ -18,7 +18,7 @@ const Footer = () => {
                 height={1000}
                 width={1000}
                 alt="logo image"
-                className="h-16 w-16 object-contain"
+                className="h-16 w-16 object-contain pointer-events-none select-none"
               />
             </div>
           </div>

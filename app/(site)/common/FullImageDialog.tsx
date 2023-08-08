@@ -59,7 +59,7 @@ const FullImageDialog: React.FC<Props> = ({ image }) => {
               width={1000}
               alt="image"
               src={image}
-              className="h-[80%]  object-contain block"
+              className="h-[80%]  object-contain block pointer-events-none select-none"
             />
           </DialogContentText>
         </DialogContent>

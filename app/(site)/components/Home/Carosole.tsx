@@ -32,7 +32,7 @@ export default class Carosole extends Component<CarosoleProps> {
                       src={`${carosole.image}`}
                       alt="spector"
                       fill
-                      className="w-screen h-96 md:h-screen object-cover brightness-75"
+                      className="w-screen h-96 md:h-screen object-cover brightness-75 pointer-events-none select-none"
                       blurDataURL="/banner2.png"
                     />
                     <div className="absolute top-1/3  z-30 px-16 w-full flex justify-center">
